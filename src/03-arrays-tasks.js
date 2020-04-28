@@ -35,7 +35,7 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  return Array(len).fill(1).map((v) => v * 2 + 1);
+  return Array.from({ length: len }, (v, k) => 1 + 2 * k);
 }
 
 
@@ -52,7 +52,7 @@ function generateOdds(len) {
  *    [] => []
  */
 function doubleArray(arr) {
-  return Array(2).fill(arr);
+  return arr.concat(arr);
 }
 
 
